@@ -25,10 +25,8 @@ def hello():
               <p class="lead">
                 <lead>It’s a Python3 
                   <strong>Flask</strong> app deployed via 
-                  <strong>uWSGI</strong>, served by 
-                  <strong>Nginx</strong> and...
-                  <br> managed by 
-                    <strong>supervisord</strong> all in an 
+                  <strong>uWSGI</strong>, in an 
+                  <br>
                     <strong>Alpine</strong> Docker container
                   </p>
                 </div>
