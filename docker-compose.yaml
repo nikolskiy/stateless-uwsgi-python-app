@@ -2,10 +2,10 @@ version: "3.7"
 
 services:
 
-  watermark:
-    container_name: prod-server
+  app:
+    container_name: flask-server
     build: ./
-    image: prod-server:latest
+    image: flask-server:latest
     read_only: true
     ports:
       - "8080:8080"

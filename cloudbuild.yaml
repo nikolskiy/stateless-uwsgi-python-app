@@ -1,12 +1,12 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/nginx-uwsgi-server', '.' ]
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/flask-uwsgi-server', '.' ]
 # push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/$PROJECT_ID/nginx-uwsgi-server']
+  args: ['push', 'gcr.io/$PROJECT_ID/flask-uwsgi-server']
   # Deploy container image to Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'nginx-uwsgi-server', '--image', 'gcr.io/$PROJECT_ID/nginx-uwsgi-server', '--region', 'us-central1', '--allow-unauthenticated']
+  args: ['beta', 'run', 'deploy', 'flask-uwsgi-server', '--image', 'gcr.io/$PROJECT_ID/flask-uwsgi-server', '--region', 'us-central1', '--allow-unauthenticated']
 images:
-  - 'gcr.io/$PROJECT_ID/nginx-uwsgi-server'
+  - 'gcr.io/$PROJECT_ID/flask-uwsgi-server'
 
