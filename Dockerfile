@@ -1,14 +1,11 @@
 FROM python:3.7-alpine
 
-# Force rebuild
-RUN ls
-
 # C compiler and linux headers are required to build uwsgi
 RUN apk add --no-cache \
     build-base \
     linux-headers && \
     pip3 install --upgrade pip && \
-    pip3 install uwsgi
+    pip3 install uwsgi==2.0.18
 
 # Copy python requirements file
 COPY requirements.txt /tmp/requirements.txt
