@@ -6,7 +6,7 @@ steps:
   args: ['push', 'gcr.io/$PROJECT_ID/flask-uwsgi-server']
   # Deploy container image to Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'flask-uwsgi-server', '--image', 'gcr.io/$PROJECT_ID/flask-uwsgi-server', '--region', 'us-central1', '--allow-unauthenticated']
+  args: ['beta', 'run', 'deploy', 'flask-uwsgi-server', '--image', 'gcr.io/$PROJECT_ID/flask-uwsgi-server', '--region', 'us-central1', '--allow-unauthenticated', '--platform', 'managed']
 images:
   - 'gcr.io/$PROJECT_ID/flask-uwsgi-server'
 
