@@ -1,5 +1,8 @@
 FROM python:3.7-alpine
 
+# Force rebuild
+RUN ls
+
 # C compiler and linux headers are required to build uwsgi
 RUN apk add --no-cache \
     build-base \
